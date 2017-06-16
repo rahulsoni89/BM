@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x6N-H7-7Ls">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x6N-H7-7Ls">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Base View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BaseViewController" customModule="BusinessManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="BusinessManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,16 +21,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="c3B-dx-UGW"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="c3B-dx-UGW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="0.0"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOG IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moj-yQ-OAf">
-                                <frame key="frameInset" minX="134" minY="129" width="108" height="21"/>
+                                <rect key="frame" x="134" y="129" width="108" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
                                 <color key="textColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aq6-PI-8Fv">
-                                <frame key="frameInset" minX="20" minY="195" width="335" height="49"/>
+                                <rect key="frame" x="20" y="195" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.096524784482758627" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,12 +40,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="seperator" translatesAutoresizingMaskIntoConstraints="NO" id="kkP-LZ-2xm">
-                                <frame key="frameInset" minX="20" minY="245" width="335" height="1"/>
+                                <rect key="frame" x="20" y="245" width="335" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="94O-oC-noT">
-                                <frame key="frameInset" minX="20" minY="274" width="335" height="49"/>
+                                <rect key="frame" x="20" y="274" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.096524784482758627" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -48,36 +53,45 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ikm-hX-xrj">
-                                <frame key="frameInset" minX="20" minY="324" width="335" height="1"/>
+                                <rect key="frame" x="20" y="324" width="335" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j14-u9-pjs">
-                                <frame key="frameInset" minX="20" minY="384" width="335" height="53"/>
+                                <rect key="frame" x="20" y="384" width="335" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.52156862749999999" green="0.64313725489999995" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" red="0.058823529409999999" green="0.070588235289999995" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnActionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kyY-uz-x8H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR6-67-uZC">
-                                <frame key="frameInset" minX="20" minY="444" width="335" height="41"/>
+                                <rect key="frame" x="20" y="444" width="335" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                 <state key="normal" title="Forget Password?">
                                     <color key="titleColor" red="0.52156862749999999" green="0.64313725489999995" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnActionForgetPass:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AmY-0K-wRv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zf8-Wu-ALz">
-                                <frame key="frameInset" minX="20" minY="614" width="100" height="41"/>
+                                <rect key="frame" x="20" y="614" width="100" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="0.52156862749999999" green="0.64313725489999995" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnActionMoveToSignup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3L-dI-v4Q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,15 +103,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gHK-z7-nW5"/>
+                    <connections>
+                        <outlet property="txtFPassword" destination="94O-oC-noT" id="6Be-Ds-ezV"/>
+                        <outlet property="txtFUname" destination="aq6-PI-8Fv" id="wpo-fo-aii"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="143" y="-1012"/>
         </scene>
-        <!--Base View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="CZE-Hq-dxB">
             <objects>
-                <viewController id="Z6o-gg-W0T" customClass="BaseViewController" customModule="BusinessManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Z6o-gg-W0T" customClass="SignupViewController" customModule="BusinessManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nKq-Ay-jDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="3t9-2J-bKY"/>
@@ -106,16 +124,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="4uL-Uh-rfR"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="4uL-Uh-rfR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="0.0"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SIGN UP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMs-D4-pFX">
-                                <frame key="frameInset" minX="30" minY="34" width="335" height="21"/>
+                                <rect key="frame" x="30" y="34" width="335" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
                                 <color key="textColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Firm Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="buQ-bD-B36">
-                                <frame key="frameInset" minX="20" minY="100" width="335" height="49"/>
+                                <rect key="frame" x="20" y="100" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,7 +144,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FirstName LastName" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K7X-6r-1h5">
-                                <frame key="frameInset" minX="20" minY="159" width="335" height="49"/>
+                                <rect key="frame" x="20" y="159" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -133,7 +153,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvl-dx-han">
-                                <frame key="frameInset" minX="20" minY="218" width="335" height="49"/>
+                                <rect key="frame" x="20" y="218" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -142,7 +162,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Contact Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8SP-3y-fyD">
-                                <frame key="frameInset" minX="20" minY="277" width="335" height="49"/>
+                                <rect key="frame" x="20" y="277" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,7 +171,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEi-Po-W5O">
-                                <frame key="frameInset" minX="20" minY="336" width="335" height="49"/>
+                                <rect key="frame" x="20" y="336" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,7 +180,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DfZ-WV-6Hc">
-                                <frame key="frameInset" minX="20" minY="395" width="335" height="49"/>
+                                <rect key="frame" x="20" y="395" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -169,7 +189,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pG8-c0-DOR">
-                                <frame key="frameInset" minX="20" minY="100" width="335" height="49"/>
+                                <rect key="frame" x="20" y="100" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.09652478448" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,12 +197,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="seperator" translatesAutoresizingMaskIntoConstraints="NO" id="teQ-nn-ZD4">
-                                <frame key="frameInset" minX="20" minY="150" width="335" height="1"/>
+                                <rect key="frame" x="20" y="150" width="335" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBh-Uk-0M7">
-                                <frame key="frameInset" minX="20" minY="159" width="335" height="49"/>
+                                <rect key="frame" x="20" y="159" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.09652478448" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,12 +210,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wO3-Ap-xhc">
-                                <frame key="frameInset" minX="20" minY="209" width="335" height="1"/>
+                                <rect key="frame" x="20" y="209" width="335" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Sj-a1-dum">
-                                <frame key="frameInset" minX="20" minY="218" width="335" height="49"/>
+                                <rect key="frame" x="20" y="218" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.09652478448" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -203,12 +223,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="seperator" translatesAutoresizingMaskIntoConstraints="NO" id="bfI-NB-Pm3">
-                                <frame key="frameInset" minX="20" minY="268" width="335" height="1"/>
+                                <rect key="frame" x="20" y="268" width="335" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-jh-NlP">
-                                <frame key="frameInset" minX="20" minY="277" width="335" height="49"/>
+                                <rect key="frame" x="20" y="277" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.09652478448" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -216,12 +236,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kn1-qF-PKv">
-                                <frame key="frameInset" minX="20" minY="327" width="335" height="1"/>
+                                <rect key="frame" x="20" y="327" width="335" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-yb-asT">
-                                <frame key="frameInset" minX="20" minY="336" width="335" height="49"/>
+                                <rect key="frame" x="20" y="336" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.09652478448" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,12 +249,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="seperator" translatesAutoresizingMaskIntoConstraints="NO" id="tL3-3c-TNI">
-                                <frame key="frameInset" minX="20" minY="386" width="335" height="1"/>
+                                <rect key="frame" x="20" y="386" width="335" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7cV-l3-7qT">
-                                <frame key="frameInset" minX="20" minY="395" width="335" height="49"/>
+                                <rect key="frame" x="20" y="395" width="335" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.09652478448" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -242,27 +262,33 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eff-i4-spa">
-                                <frame key="frameInset" minX="20" minY="445" width="335" height="1"/>
+                                <rect key="frame" x="20" y="445" width="335" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.81568627449999997" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7N-cB-Tek">
-                                <frame key="frameInset" minX="20" minY="498" width="335" height="53"/>
+                                <rect key="frame" x="20" y="498" width="335" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.52156862749999999" green="0.64313725489999995" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="0.058823529409999999" green="0.070588235289999995" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnActionSignup:" destination="Z6o-gg-W0T" eventType="touchUpInside" id="Cpx-5T-cmh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBx-Up-P4D">
-                                <frame key="frameInset" minX="20" minY="614" width="100" height="41"/>
+                                <rect key="frame" x="20" y="614" width="100" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" red="0.52156862749999999" green="0.64313725489999995" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnActionMoveToLogin:" destination="Z6o-gg-W0T" eventType="touchUpInside" id="w6a-UT-lcw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -274,6 +300,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VR8-Wo-dSa"/>
+                    <connections>
+                        <outlet property="txtFEmail" destination="2Sj-a1-dum" id="f1u-BH-mtj"/>
+                        <outlet property="txtFFLName" destination="mBh-Uk-0M7" id="NDN-BS-vm6"/>
+                        <outlet property="txtFFirmName" destination="pG8-c0-DOR" id="Alj-zK-FMD"/>
+                        <outlet property="txtFMobile" destination="Oev-jh-NlP" id="YLE-JG-17t"/>
+                        <outlet property="txtFPassword" destination="7cV-l3-7qT" id="RMp-7U-0hO"/>
+                        <outlet property="txtFUname" destination="5mL-yb-asT" id="TbM-tS-XK9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNC-QI-vYu" sceneMemberID="firstResponder"/>
             </objects>

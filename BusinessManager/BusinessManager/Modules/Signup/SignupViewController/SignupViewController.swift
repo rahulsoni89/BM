@@ -1,19 +1,21 @@
 //
-//  LoginViewController.swift
+//  SignupViewController.swift
 //  BusinessManager
 //
-//  Created by Rahul Soni on 6/11/17.
+//  Created by impadmin on 16/06/17.
 //  Copyright © 2017 Rahul Soni. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: BaseViewController, LoginPresenterDelegate {
+class SignupViewController: BaseViewController {
     
-    
+    @IBOutlet weak var txtFFirmName: UITextField!
+    @IBOutlet weak var txtFFLName: UITextField!
+    @IBOutlet weak var txtFEmail: UITextField!
+    @IBOutlet weak var txtFMobile: UITextField!
     @IBOutlet weak var txtFUname: UITextField!
     @IBOutlet weak var txtFPassword: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,32 +33,17 @@ class LoginViewController: BaseViewController, LoginPresenterDelegate {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func btnActionSignup(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnActionMoveToLogin(_ sender: UIButton) {
+    }
+    
 
-    @IBAction func btnActionLogin(_ sender: UIButton) {
-        
-        let objPresenter: LoginPresenter = LoginPresenter()
-        objPresenter.delgLoginPresenter = self
-        objPresenter.loginBtnPressed(strUsername: txtFUname.text!, strPassword: txtFPassword.text!)
-    }
-    
-    @IBAction func btnActionForgetPass(_ sender: UIButton) {
-    }
-    
-    @IBAction func btnActionMoveToSignup(_ sender: UIButton) {
-    }
-    
-    func responseToLoginController(isError: Bool, strErrorDetails: String)
-    {
-        
-    }
-    
-    func showError(strError: String)
-    {
-        
-    }
 }

@@ -12,9 +12,14 @@
 		4F1AF0951EED525C00759DCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1AF0931EED525C00759DCC /* Main.storyboard */; };
 		4F1AF0A41EED7CD300759DCC /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AF0A31EED7CD300759DCC /* BasePresenter.swift */; };
 		4F1AF0A71EED7D4B00759DCC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AF0A61EED7D4B00759DCC /* BaseViewController.swift */; };
-		4F1AF0A91EED7D5E00759DCC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AF0A81EED7D5E00759DCC /* LoginViewController.swift */; };
 		4F45B4881ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F45B4861ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld */; };
 		4F45B48A1ED1D5A700EF3E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F45B4891ED1D5A700EF3E2D /* Assets.xcassets */; };
+		F70C575C1EF3BCBE00EFFC34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C57551EF3BCBE00EFFC34 /* LoginViewController.swift */; };
+		F70C575E1EF3BCD700EFFC34 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C575D1EF3BCD700EFFC34 /* SignupViewController.swift */; };
+		F70C57621EF3BD6300EFFC34 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C57611EF3BD6300EFFC34 /* LoginPresenter.swift */; };
+		F70C57641EF3BD9E00EFFC34 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C57631EF3BD9E00EFFC34 /* LoginInteractor.swift */; };
+		F70C57661EF3BDD500EFFC34 /* LoginRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C57651EF3BDD500EFFC34 /* LoginRoutes.swift */; };
+		F71B38411EF413E9001B89DA /* BaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B38401EF413E9001B89DA /* BaseValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +28,16 @@
 		4F1AF0931EED525C00759DCC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4F1AF0A31EED7CD300759DCC /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		4F1AF0A61EED7D4B00759DCC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		4F1AF0A81EED7D5E00759DCC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4F45B47C1ED1D5A700EF3E2D /* BusinessManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusinessManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F45B4871ED1D5A700EF3E2D /* BusinessManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessManager.xcdatamodel; sourceTree = "<group>"; };
 		4F45B4891ED1D5A700EF3E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F45B48E1ED1D5A700EF3E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F70C57551EF3BCBE00EFFC34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F70C575D1EF3BCD700EFFC34 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		F70C57611EF3BD6300EFFC34 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		F70C57631EF3BD9E00EFFC34 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		F70C57651EF3BDD500EFFC34 /* LoginRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRoutes.swift; sourceTree = "<group>"; };
+		F71B38401EF413E9001B89DA /* BaseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,105 +62,10 @@
 		4F1AF0801EED519900759DCC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				4F1AF0811EED519900759DCC /* Login */,
-				4F1AF0871EED519900759DCC /* Signup */,
+				F70C574F1EF3BCBE00EFFC34 /* Login */,
+				F70C57561EF3BCBE00EFFC34 /* Signup */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		4F1AF0811EED519900759DCC /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				4F1AF0821EED519900759DCC /* LoginEntity */,
-				4F1AF0831EED519900759DCC /* LoginInteractor */,
-				4F1AF0841EED519900759DCC /* LoginPresenter */,
-				4F1AF0851EED519900759DCC /* LoginRoutes */,
-				4F1AF0861EED519900759DCC /* LoginViewController */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		4F1AF0821EED519900759DCC /* LoginEntity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginEntity;
-			sourceTree = "<group>";
-		};
-		4F1AF0831EED519900759DCC /* LoginInteractor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginInteractor;
-			sourceTree = "<group>";
-		};
-		4F1AF0841EED519900759DCC /* LoginPresenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginPresenter;
-			sourceTree = "<group>";
-		};
-		4F1AF0851EED519900759DCC /* LoginRoutes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginRoutes;
-			sourceTree = "<group>";
-		};
-		4F1AF0861EED519900759DCC /* LoginViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4F1AF0A81EED7D5E00759DCC /* LoginViewController.swift */,
-			);
-			path = LoginViewController;
-			sourceTree = "<group>";
-		};
-		4F1AF0871EED519900759DCC /* Signup */ = {
-			isa = PBXGroup;
-			children = (
-				4F1AF0881EED519900759DCC /* SignupEntity */,
-				4F1AF0891EED519900759DCC /* SignupInteractor */,
-				4F1AF08A1EED519900759DCC /* SignupPresenter */,
-				4F1AF08B1EED519900759DCC /* SignupRoutes */,
-				4F1AF08C1EED519900759DCC /* SignupViewController */,
-			);
-			path = Signup;
-			sourceTree = "<group>";
-		};
-		4F1AF0881EED519900759DCC /* SignupEntity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignupEntity;
-			sourceTree = "<group>";
-		};
-		4F1AF0891EED519900759DCC /* SignupInteractor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignupInteractor;
-			sourceTree = "<group>";
-		};
-		4F1AF08A1EED519900759DCC /* SignupPresenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignupPresenter;
-			sourceTree = "<group>";
-		};
-		4F1AF08B1EED519900759DCC /* SignupRoutes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignupRoutes;
-			sourceTree = "<group>";
-		};
-		4F1AF08C1EED519900759DCC /* SignupViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignupViewController;
 			sourceTree = "<group>";
 		};
 		4F1AF08E1EED519900759DCC /* Storyboards */ = {
@@ -165,18 +80,13 @@
 		4F1AF0981EED55E100759DCC /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				F71B383D1EF413E9001B89DA /* BaseErrorController */,
+				F71B383E1EF413E9001B89DA /* BaseNetwork */,
+				F71B383F1EF413E9001B89DA /* BaseValidator */,
 				4F1AF0A51EED7D3D00759DCC /* BaseViewController */,
 				4F1AF0A21EED7CD300759DCC /* BasePresenter */,
-				4F1AF09A1EED55E100759DCC /* Network */,
 			);
 			path = BaseClasses;
-			sourceTree = "<group>";
-		};
-		4F1AF09A1EED55E100759DCC /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		4F1AF09B1EED55F000759DCC /* Constants */ = {
@@ -221,9 +131,9 @@
 		4F45B47E1ED1D5A700EF3E2D /* BusinessManager */ = {
 			isa = PBXGroup;
 			children = (
+				4F1AF07D1EED519900759DCC /* Application */,
 				4F1AF09B1EED55F000759DCC /* Constants */,
 				4F1AF0981EED55E100759DCC /* BaseClasses */,
-				4F1AF07D1EED519900759DCC /* Application */,
 				4F1AF0801EED519900759DCC /* Modules */,
 				4F1AF08E1EED519900759DCC /* Storyboards */,
 				4F45B4891ED1D5A700EF3E2D /* Assets.xcassets */,
@@ -231,6 +141,127 @@
 				4F45B4861ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld */,
 			);
 			path = BusinessManager;
+			sourceTree = "<group>";
+		};
+		F70C574F1EF3BCBE00EFFC34 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F70C57541EF3BCBE00EFFC34 /* LoginViewController */,
+				F70C57521EF3BCBE00EFFC34 /* LoginPresenter */,
+				F70C57511EF3BCBE00EFFC34 /* LoginInteractor */,
+				F70C57501EF3BCBE00EFFC34 /* LoginEntity */,
+				F70C57531EF3BCBE00EFFC34 /* LoginRoutes */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F70C57501EF3BCBE00EFFC34 /* LoginEntity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginEntity;
+			sourceTree = "<group>";
+		};
+		F70C57511EF3BCBE00EFFC34 /* LoginInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				F70C57631EF3BD9E00EFFC34 /* LoginInteractor.swift */,
+			);
+			path = LoginInteractor;
+			sourceTree = "<group>";
+		};
+		F70C57521EF3BCBE00EFFC34 /* LoginPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				F70C57611EF3BD6300EFFC34 /* LoginPresenter.swift */,
+			);
+			path = LoginPresenter;
+			sourceTree = "<group>";
+		};
+		F70C57531EF3BCBE00EFFC34 /* LoginRoutes */ = {
+			isa = PBXGroup;
+			children = (
+				F70C57651EF3BDD500EFFC34 /* LoginRoutes.swift */,
+			);
+			path = LoginRoutes;
+			sourceTree = "<group>";
+		};
+		F70C57541EF3BCBE00EFFC34 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F70C57551EF3BCBE00EFFC34 /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		F70C57561EF3BCBE00EFFC34 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				F70C57571EF3BCBE00EFFC34 /* SignupEntity */,
+				F70C57581EF3BCBE00EFFC34 /* SignupInteractor */,
+				F70C57591EF3BCBE00EFFC34 /* SignupPresenter */,
+				F70C575A1EF3BCBE00EFFC34 /* SignupRoutes */,
+				F70C575B1EF3BCBE00EFFC34 /* SignupViewController */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		F70C57571EF3BCBE00EFFC34 /* SignupEntity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignupEntity;
+			sourceTree = "<group>";
+		};
+		F70C57581EF3BCBE00EFFC34 /* SignupInteractor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignupInteractor;
+			sourceTree = "<group>";
+		};
+		F70C57591EF3BCBE00EFFC34 /* SignupPresenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignupPresenter;
+			sourceTree = "<group>";
+		};
+		F70C575A1EF3BCBE00EFFC34 /* SignupRoutes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignupRoutes;
+			sourceTree = "<group>";
+		};
+		F70C575B1EF3BCBE00EFFC34 /* SignupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F70C575D1EF3BCD700EFFC34 /* SignupViewController.swift */,
+			);
+			path = SignupViewController;
+			sourceTree = "<group>";
+		};
+		F71B383D1EF413E9001B89DA /* BaseErrorController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseErrorController;
+			sourceTree = "<group>";
+		};
+		F71B383E1EF413E9001B89DA /* BaseNetwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseNetwork;
+			sourceTree = "<group>";
+		};
+		F71B383F1EF413E9001B89DA /* BaseValidator */ = {
+			isa = PBXGroup;
+			children = (
+				F71B38401EF413E9001B89DA /* BaseValidator.swift */,
+			);
+			path = BaseValidator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,10 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F1AF0A91EED7D5E00759DCC /* LoginViewController.swift in Sources */,
+				F70C575E1EF3BCD700EFFC34 /* SignupViewController.swift in Sources */,
 				4F1AF0A71EED7D4B00759DCC /* BaseViewController.swift in Sources */,
+				F70C57621EF3BD6300EFFC34 /* LoginPresenter.swift in Sources */,
 				4F1AF0901EED519900759DCC /* AppDelegate.swift in Sources */,
+				F70C57641EF3BD9E00EFFC34 /* LoginInteractor.swift in Sources */,
+				F70C57661EF3BDD500EFFC34 /* LoginRoutes.swift in Sources */,
 				4F1AF0A41EED7CD300759DCC /* BasePresenter.swift in Sources */,
+				F71B38411EF413E9001B89DA /* BaseValidator.swift in Sources */,
+				F70C575C1EF3BCBE00EFFC34 /* LoginViewController.swift in Sources */,
 				4F45B4881ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
