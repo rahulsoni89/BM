@@ -27,7 +27,7 @@ class LoginPresenter: NSObject, LoginInteractorDelegate {
     func responseToLoginPresenter(isError: Bool, strErrorDetails: String)
     {
         if(isError){
-        delgLoginPresenter.showError(strError: strErrorDetails)
+            delgLoginPresenter.showError(strError: strErrorDetails)
         }
         else{
             

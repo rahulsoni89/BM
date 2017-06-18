@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, BaseAlertDelegates {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,5 +31,22 @@ class BaseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func showAlertWith(strTitle: String, strMsg: String, aryBtnNamesStrings: [String], intTag: Int, objDelegate: Any)
+    {
+        let alert = UIAlertController(title: strTitle, message: strMsg, preferredStyle: UIAlertControllerStyle.alert)
+        
+        for strButtonName in aryBtnNamesStrings
+        {
+            alert.addAction(UIAlertAction(title: strButtonName, style: UIAlertActionStyle.default, handler: nil))
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func alertAction(intTag: Int)
+    {
+        
+    }
 
 }

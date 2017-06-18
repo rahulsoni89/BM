@@ -14,6 +14,7 @@
 		4F1AF0A71EED7D4B00759DCC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AF0A61EED7D4B00759DCC /* BaseViewController.swift */; };
 		4F45B4881ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F45B4861ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld */; };
 		4F45B48A1ED1D5A700EF3E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F45B4891ED1D5A700EF3E2D /* Assets.xcassets */; };
+		4FB20C581EF546CE00C34C8C /* BaseAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB20C571EF546CE00C34C8C /* BaseAlertController.swift */; };
 		F70C575C1EF3BCBE00EFFC34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C57551EF3BCBE00EFFC34 /* LoginViewController.swift */; };
 		F70C575E1EF3BCD700EFFC34 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C575D1EF3BCD700EFFC34 /* SignupViewController.swift */; };
 		F70C57621EF3BD6300EFFC34 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C57611EF3BD6300EFFC34 /* LoginPresenter.swift */; };
@@ -32,6 +33,7 @@
 		4F45B4871ED1D5A700EF3E2D /* BusinessManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessManager.xcdatamodel; sourceTree = "<group>"; };
 		4F45B4891ED1D5A700EF3E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F45B48E1ED1D5A700EF3E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FB20C571EF546CE00C34C8C /* BaseAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAlertController.swift; sourceTree = "<group>"; };
 		F70C57551EF3BCBE00EFFC34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F70C575D1EF3BCD700EFFC34 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F70C57611EF3BD6300EFFC34 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		4F1AF0981EED55E100759DCC /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				4FB20C561EF546B700C34C8C /* BaseAlertController */,
 				F71B383D1EF413E9001B89DA /* BaseErrorController */,
 				F71B383E1EF413E9001B89DA /* BaseNetwork */,
 				F71B383F1EF413E9001B89DA /* BaseValidator */,
@@ -143,14 +146,22 @@
 			path = BusinessManager;
 			sourceTree = "<group>";
 		};
+		4FB20C561EF546B700C34C8C /* BaseAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				4FB20C571EF546CE00C34C8C /* BaseAlertController.swift */,
+			);
+			path = BaseAlertController;
+			sourceTree = "<group>";
+		};
 		F70C574F1EF3BCBE00EFFC34 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				F70C57541EF3BCBE00EFFC34 /* LoginViewController */,
 				F70C57521EF3BCBE00EFFC34 /* LoginPresenter */,
 				F70C57511EF3BCBE00EFFC34 /* LoginInteractor */,
-				F70C57501EF3BCBE00EFFC34 /* LoginEntity */,
 				F70C57531EF3BCBE00EFFC34 /* LoginRoutes */,
+				F70C57501EF3BCBE00EFFC34 /* LoginEntity */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -338,6 +349,7 @@
 			files = (
 				F70C575E1EF3BCD700EFFC34 /* SignupViewController.swift in Sources */,
 				4F1AF0A71EED7D4B00759DCC /* BaseViewController.swift in Sources */,
+				4FB20C581EF546CE00C34C8C /* BaseAlertController.swift in Sources */,
 				F70C57621EF3BD6300EFFC34 /* LoginPresenter.swift in Sources */,
 				4F1AF0901EED519900759DCC /* AppDelegate.swift in Sources */,
 				F70C57641EF3BD9E00EFFC34 /* LoginInteractor.swift in Sources */,
