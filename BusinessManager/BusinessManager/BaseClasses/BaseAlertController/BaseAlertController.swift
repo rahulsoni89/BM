@@ -11,8 +11,8 @@ import UIKit
 
 protocol BaseAlertDelegates{
     
-    func showAlertWith(strTitle: String, strMsg: String, aryBtnNamesStrings: [String], intTag: Int, objDelegate: Any)
-    func alertAction(intTag: Int)
+    func showAlertWith(strTitle: String, strMsg: String, aryBtnNamesStrings: [String], objDelegate: Any)
+    func alertAction(strTitle: String, objDelegate: Any)
     
 }
 

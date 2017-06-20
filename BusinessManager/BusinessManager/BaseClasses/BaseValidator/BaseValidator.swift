@@ -10,7 +10,7 @@ import UIKit
 
 class BaseValidator: NSObject {
 
-    static func validateStringHavingData(strData: String) -> Bool {
+    static func validateIsStringHavingData(strData: String) -> Bool {
         if strData.characters.count > 0{
             return true
         }

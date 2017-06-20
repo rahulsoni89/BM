@@ -32,19 +32,26 @@ class BaseViewController: UIViewController, BaseAlertDelegates {
     }
     */
     
-    func showAlertWith(strTitle: String, strMsg: String, aryBtnNamesStrings: [String], intTag: Int, objDelegate: Any)
+    func showAlertWith(strTitle: String, strMsg: String, aryBtnNamesStrings: [String],  objDelegate: Any)
     {
         let alert = UIAlertController(title: strTitle, message: strMsg, preferredStyle: UIAlertControllerStyle.alert)
         
         for strButtonName in aryBtnNamesStrings
         {
-            alert.addAction(UIAlertAction(title: strButtonName, style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: strButtonName, style: .default, handler: { action in
+                
+                self.alertAction(strTitle: action.title!, objDelegate: objDelegate)
+                
+                //alert.dismiss(animated: true, completion: nil)//dismiss show You alert, on click is Cancel
+                
+            }))
+            
         }
         
         self.present(alert, animated: true, completion: nil)
     }
     
-    func alertAction(intTag: Int)
+    func alertAction(strTitle: String, objDelegate: Any)
     {
         
     }

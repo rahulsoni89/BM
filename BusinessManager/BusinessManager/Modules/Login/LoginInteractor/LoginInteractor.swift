@@ -23,7 +23,7 @@ class LoginInteractor: NSObject {
         
         if(!validatationResponse.0)
         {
-            delegLoginInteractor.responseToLoginPresenter(isError: validatationResponse.0, strErrorDetails: validatationResponse.1!)
+            delegLoginInteractor.responseToLoginPresenter(isError: !(validatationResponse.0), strErrorDetails: validatationResponse.1!)
         }
         else
         {
@@ -34,11 +34,11 @@ class LoginInteractor: NSObject {
     
     func validateCredentials(strUsername:String, strPassword:String) -> (Bool, String?) {
         
-        if(!(BaseValidator.validateStringHavingData(strData: strUsername)))
+        if(!(BaseValidator.validateIsStringHavingData(strData: strUsername)))
         {
             return (false, "Please enter Username")
         }
-        if(!(BaseValidator.validateStringHavingData(strData: strPassword)))
+        if(!(BaseValidator.validateIsStringHavingData(strData: strPassword)))
         {
             return (false, "Please enter Password")
         }

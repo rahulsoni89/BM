@@ -57,6 +57,7 @@ class LoginViewController: BaseViewController, LoginPresenterDelegate {
     
     func showError(strError: String)
     {
-        
+        self.showAlertWith(strTitle: "Invalid Credentials", strMsg: "Please provide valid credentails", aryBtnNamesStrings: ["OK"], objDelegate: self)
     }
+    
 }
