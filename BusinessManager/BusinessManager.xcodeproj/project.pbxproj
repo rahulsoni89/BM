@@ -24,6 +24,7 @@
 		F76622D01F011C650022E1FA /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622CF1F011C650022E1FA /* BaseNetwork.swift */; };
 		F76622D41F023EEF0022E1FA /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622D31F023EEF0022E1FA /* BaseRequest.swift */; };
 		F76622D91F027D570022E1FA /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622D81F027D570022E1FA /* LoginRequest.swift */; };
+		F76622DC1F02A06A0022E1FA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622DB1F02A06A0022E1FA /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		F76622CF1F011C650022E1FA /* BaseNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 		F76622D31F023EEF0022E1FA /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		F76622D81F027D570022E1FA /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		F76622DB1F02A06A0022E1FA /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		4F45B47E1ED1D5A700EF3E2D /* BusinessManager */ = {
 			isa = PBXGroup;
 			children = (
+				F76622DA1F02A0190022E1FA /* ThirdPartyHelper */,
 				4F1AF07D1EED519900759DCC /* Application */,
 				4F1AF09B1EED55F000759DCC /* Constants */,
 				4F1AF0981EED55E100759DCC /* BaseClasses */,
@@ -316,6 +319,14 @@
 			path = LoginResponse;
 			sourceTree = "<group>";
 		};
+		F76622DA1F02A0190022E1FA /* ThirdPartyHelper */ = {
+			isa = PBXGroup;
+			children = (
+				F76622DB1F02A06A0022E1FA /* Reachability.swift */,
+			);
+			path = ThirdPartyHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,6 +407,7 @@
 				F76622D91F027D570022E1FA /* LoginRequest.swift in Sources */,
 				F70C57641EF3BD9E00EFFC34 /* LoginInteractor.swift in Sources */,
 				F70C57661EF3BDD500EFFC34 /* LoginRoutes.swift in Sources */,
+				F76622DC1F02A06A0022E1FA /* Reachability.swift in Sources */,
 				4F1AF0A41EED7CD300759DCC /* BasePresenter.swift in Sources */,
 				F71B38411EF413E9001B89DA /* BaseValidator.swift in Sources */,
 				F76622D01F011C650022E1FA /* BaseNetwork.swift in Sources */,
