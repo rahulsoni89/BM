@@ -39,6 +39,9 @@ class LoginViewController: BaseViewController, LoginPresenterDelegate {
 
     @IBAction func btnActionLogin(_ sender: UIButton) {
         
+
+        //self.NW21();
+        
         let objPresenter: LoginPresenter = LoginPresenter()
         objPresenter.delgLoginPresenter = self
         objPresenter.loginBtnPressed(strUsername: txtFUname.text!, strPassword: txtFPassword.text!)
@@ -58,6 +61,39 @@ class LoginViewController: BaseViewController, LoginPresenterDelegate {
     func showError(strError: String)
     {
         self.showAlertWith(strTitle: "Invalid Credentials", strMsg: "Please provide valid credentails", aryBtnNamesStrings: ["OK"], objDelegate: self)
+    }
+    
+    func NW21()
+    {
+        let urlString = URL(string: "http://jsonplaceholder.typicode.com/users/1")
+        if let url = urlString {
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    print(error!)
+                } else {
+                    if let usableData = data {
+                        print(usableData) //JSONSerialization
+                        
+                        do {
+                            let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: AnyObject]
+                            
+                            print(json) //JSONSerialization
+
+                            
+//                            if let names = json["names"] as? [String] {
+//                                print(names)
+//                            }
+                            
+                        } catch let error as NSError {
+                            print("Failed to load: \(error.localizedDescription)")
+                        }
+
+                        
+                    }
+                }
+            }
+            task.resume()
+        }
     }
     
 }

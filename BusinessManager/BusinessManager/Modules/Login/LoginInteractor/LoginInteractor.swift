@@ -27,7 +27,7 @@ class LoginInteractor: NSObject {
         }
         else
         {
-            
+            self.callLoginAPI(strUsername: strUsername, strPassword: strPassword)
         }
         
     }
@@ -44,6 +44,16 @@ class LoginInteractor: NSObject {
         }
         
         return (true, nil)
+    }
+    
+    func callLoginAPI(strUsername:String, strPassword:String){
+        
+        let objLoginReq = LoginRequest()
+        objLoginReq.strUname = strUsername
+        objLoginReq.strPassword = strPassword
+        
+        
+        
     }
     
 }

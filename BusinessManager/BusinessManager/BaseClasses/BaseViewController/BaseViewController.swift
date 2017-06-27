@@ -55,5 +55,42 @@ class BaseViewController: UIViewController, BaseAlertDelegates {
     {
         
     }
+    
+    func callAPIWithRequest(objRequest:BaseRequest) {
+        
+    }
+
+    
+    func NW2()
+        {
+            let urlString = URL(string: "http://jsonplaceholder.typicode.com/users/1")
+            if let url = urlString {
+                let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                    if error != nil {
+                        print(error!)
+                    } else {
+                        if let usableData = data {
+                            print(usableData) //JSONSerialization
+                        }
+                    }
+                }
+                task.resume()
+        }
+    }
+    
+        func NW1()
+        {
+            let config = URLSessionConfiguration.default
+            let session = URLSession(configuration: config)
+            let url = URL(string: "YOUR URL STRING")!
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    print(error!.localizedDescription)
+                } else {
+                    print(data) // JSON Serialization
+                }
+            }
+            task.resume()
+        }
 
 }
