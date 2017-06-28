@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol DownloadDelegate{
+
+    func didFinishDownloading(objDownloadType:BaseRequest.reqName, objReturnObject:AnyObject, objResponseCode: AnyObject)
+}
+
+
 class BaseViewController: UIViewController, BaseAlertDelegates {
 
     override func viewDidLoad() {
@@ -56,7 +62,7 @@ class BaseViewController: UIViewController, BaseAlertDelegates {
         
     }
     
-    func callAPIWithRequest(objRequest:BaseRequest) {
+    func callAPIWithRequest(objRequest:BaseRequest, objDelegate:AnyObject) {
         
         //declare this property where it won't go out of scope relative to your listener
         let reachability = Reachability()!

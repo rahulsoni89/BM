@@ -8,16 +8,18 @@
 
 import UIKit
 
-class BaseNetwork: NSObject {
+class BaseNetworkManager: NSObject {
     
     var strBaseURL:String?
     var strParameters:String?
     
     
+    
+    
     //"http://jsonplaceholder.typicode.com/users/1"
     
 
-    func callRequest()
+    func initiateRequest(objRequest:BaseRequest, objDelegate:AnyObject)
     {
         if((strBaseURL?.isEmpty)!)
         {

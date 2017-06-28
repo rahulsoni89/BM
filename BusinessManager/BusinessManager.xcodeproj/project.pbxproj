@@ -21,10 +21,12 @@
 		F70C57641EF3BD9E00EFFC34 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C57631EF3BD9E00EFFC34 /* LoginInteractor.swift */; };
 		F70C57661EF3BDD500EFFC34 /* LoginRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C57651EF3BDD500EFFC34 /* LoginRoutes.swift */; };
 		F71B38411EF413E9001B89DA /* BaseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71B38401EF413E9001B89DA /* BaseValidator.swift */; };
-		F76622D01F011C650022E1FA /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622CF1F011C650022E1FA /* BaseNetwork.swift */; };
+		F76622D01F011C650022E1FA /* BaseNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622CF1F011C650022E1FA /* BaseNetworkManager.swift */; };
 		F76622D41F023EEF0022E1FA /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622D31F023EEF0022E1FA /* BaseRequest.swift */; };
 		F76622D91F027D570022E1FA /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622D81F027D570022E1FA /* LoginRequest.swift */; };
 		F76622DC1F02A06A0022E1FA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622DB1F02A06A0022E1FA /* Reachability.swift */; };
+		F76622E01F03B7D60022E1FA /* BaseRequestExecuter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622DF1F03B7D60022E1FA /* BaseRequestExecuter.swift */; };
+		F76622E21F03B7E80022E1FA /* BaseHTTPCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76622E11F03B7E80022E1FA /* BaseHTTPCaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +46,12 @@
 		F70C57631EF3BD9E00EFFC34 /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		F70C57651EF3BDD500EFFC34 /* LoginRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRoutes.swift; sourceTree = "<group>"; };
 		F71B38401EF413E9001B89DA /* BaseValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseValidator.swift; sourceTree = "<group>"; };
-		F76622CF1F011C650022E1FA /* BaseNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
+		F76622CF1F011C650022E1FA /* BaseNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNetworkManager.swift; sourceTree = "<group>"; };
 		F76622D31F023EEF0022E1FA /* BaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		F76622D81F027D570022E1FA /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		F76622DB1F02A06A0022E1FA /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F76622DF1F03B7D60022E1FA /* BaseRequestExecuter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRequestExecuter.swift; sourceTree = "<group>"; };
+		F76622E11F03B7E80022E1FA /* BaseHTTPCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHTTPCaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 		4F1AF0981EED55E100759DCC /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				F76622DD1F03B7BF0022E1FA /* BaseHTTPCaller */,
+				F76622DE1F03B7BF0022E1FA /* BaseRequestExecuter */,
 				4FB20C561EF546B700C34C8C /* BaseAlertController */,
 				F71B383D1EF413E9001B89DA /* BaseErrorController */,
 				F71B383E1EF413E9001B89DA /* BaseNetwork */,
@@ -273,7 +279,7 @@
 		F71B383E1EF413E9001B89DA /* BaseNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				F76622CF1F011C650022E1FA /* BaseNetwork.swift */,
+				F76622CF1F011C650022E1FA /* BaseNetworkManager.swift */,
 				F76622D21F023EDB0022E1FA /* BaseRequest */,
 			);
 			path = BaseNetwork;
@@ -325,6 +331,24 @@
 				F76622DB1F02A06A0022E1FA /* Reachability.swift */,
 			);
 			path = ThirdPartyHelper;
+			sourceTree = "<group>";
+		};
+		F76622DD1F03B7BF0022E1FA /* BaseHTTPCaller */ = {
+			isa = PBXGroup;
+			children = (
+				F76622E11F03B7E80022E1FA /* BaseHTTPCaller.swift */,
+			);
+			name = BaseHTTPCaller;
+			path = BaseNetwork/BaseHTTPCaller;
+			sourceTree = "<group>";
+		};
+		F76622DE1F03B7BF0022E1FA /* BaseRequestExecuter */ = {
+			isa = PBXGroup;
+			children = (
+				F76622DF1F03B7D60022E1FA /* BaseRequestExecuter.swift */,
+			);
+			name = BaseRequestExecuter;
+			path = BaseNetwork/BaseRequestExecuter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,9 +433,11 @@
 				F70C57661EF3BDD500EFFC34 /* LoginRoutes.swift in Sources */,
 				F76622DC1F02A06A0022E1FA /* Reachability.swift in Sources */,
 				4F1AF0A41EED7CD300759DCC /* BasePresenter.swift in Sources */,
+				F76622E21F03B7E80022E1FA /* BaseHTTPCaller.swift in Sources */,
 				F71B38411EF413E9001B89DA /* BaseValidator.swift in Sources */,
-				F76622D01F011C650022E1FA /* BaseNetwork.swift in Sources */,
+				F76622D01F011C650022E1FA /* BaseNetworkManager.swift in Sources */,
 				F70C575C1EF3BCBE00EFFC34 /* LoginViewController.swift in Sources */,
+				F76622E01F03B7D60022E1FA /* BaseRequestExecuter.swift in Sources */,
 				F76622D41F023EEF0022E1FA /* BaseRequest.swift in Sources */,
 				4F45B4881ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld in Sources */,
 			);

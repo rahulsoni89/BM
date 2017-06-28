@@ -12,7 +12,7 @@ protocol LoginInteractorDelegate{
     func responseToLoginPresenter(isError: Bool, strErrorDetails: String)
 }
 
-class LoginInteractor: NSObject {
+class LoginInteractor: BaseViewController {
     
     var delegLoginInteractor: LoginInteractorDelegate! = nil
     
@@ -53,6 +53,7 @@ class LoginInteractor: NSObject {
         objLoginReq.strPassword = strPassword
         
         
+        self.callAPIWithRequest(objRequest: objLoginReq, objDelegate: self)
         
     }
     
