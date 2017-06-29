@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ProtocolAPIResponse {
+protocol ProtocolNtwrkMgrResponse {
     
     func processResponse(objResponse:AnyObject?)
     func processError(objError:Error?)
@@ -18,6 +18,8 @@ class BaseNetworkManager: NSObject, ProtocolReqExecuter {
     
     var strBaseURL:String?
     var strParameters:String?
+
+    var objDelegate:ProtocolNtwrkMgrResponse?
 
     
     //"http://jsonplaceholder.typicode.com/users/1"
@@ -70,7 +72,15 @@ class BaseNetworkManager: NSObject, ProtocolReqExecuter {
     //Delegate BaseRequestExecuter
     func processExecuterResponse(objResponse:AnyObject?, objError:Error?)
     {
-        
+        if(objError != nil)
+        {
+            self.objDelegate?.processError(objError: objError)
+        }
+        else
+        {
+            self.objDelegate?.processResponse(objResponse: objResponse)
+
+        }
     }
 
     

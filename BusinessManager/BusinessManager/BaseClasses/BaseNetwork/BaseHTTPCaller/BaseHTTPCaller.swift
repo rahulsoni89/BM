@@ -22,7 +22,7 @@ class BaseHTTPCaller: NSObject {
     var reqDictValues:[String:String]?
     var objDelegate:ProtocolHTTP?
     
-    func test()
+    func startCallingAPI()
     {
         //Prepare json data
         let jsonData = reqDataJsonParameters
@@ -55,7 +55,7 @@ class BaseHTTPCaller: NSObject {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if error != nil {
                 
-               // self.objDelegate?.responseProcess(objResponse: nil, objError:error)
+                self.objDelegate?.processHTTPResponse(objResponse: data as AnyObject?, objError: error)
                 
                 print(error!)
             }
@@ -63,7 +63,10 @@ class BaseHTTPCaller: NSObject {
                 if let usableData = data {
                     print(usableData) //JSONSerialization
                     
-                    do {
+                    self.objDelegate?.processHTTPResponse(objResponse: data as AnyObject?, objError: error)
+                    
+                    
+                    /*do {
                         let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: AnyObject]
                         
                         print(json) //JSONSerialization
@@ -75,7 +78,7 @@ class BaseHTTPCaller: NSObject {
                         
                     } catch let error as NSError {
                         print("Failed to load: \(error.localizedDescription)")
-                    }
+                    }*/
                     
                     
                 }

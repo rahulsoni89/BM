@@ -9,34 +9,34 @@
 import UIKit
 
 protocol DownloadDelegate{
-
-    func didFinishDownloading(objDownloadType:BaseRequest.reqName, objReturnObject:AnyObject, objResponseCode: AnyObject)
+    
+    func didFinishDownloading(objDownloadType:BaseRequest.reqName, objReturnObject:AnyObject, objResponseCode: AnyObject, error:Error)
 }
 
 
-class BaseViewController: UIViewController, BaseAlertDelegates, ProtocolAPIResponse {
-
+class BaseViewController: UIViewController, BaseAlertDelegates, ProtocolNtwrkMgrResponse {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     func showAlertWith(strTitle: String, strMsg: String, aryBtnNamesStrings: [String],  objDelegate: Any)
     {
@@ -66,7 +66,7 @@ class BaseViewController: UIViewController, BaseAlertDelegates, ProtocolAPIRespo
         
         let objBaseNetworkManager = BaseNetworkManager()
         objBaseNetworkManager.initiateRequest(objRequest: objRequest, objDelegate: objDelegate)
-
+        
         
         //declare this property where it won't go out of scope relative to your listener
         let reachability = Reachability()!
@@ -81,8 +81,8 @@ class BaseViewController: UIViewController, BaseAlertDelegates, ProtocolAPIRespo
                     print("Reachable via Cellular")
                 }
                 
-            let objBaseNetworkManager = BaseNetworkManager()
-            objBaseNetworkManager.initiateRequest(objRequest: objRequest, objDelegate: objDelegate)
+                let objBaseNetworkManager = BaseNetworkManager()
+                objBaseNetworkManager.initiateRequest(objRequest: objRequest, objDelegate: objDelegate)
                 
             }
         }
@@ -95,40 +95,45 @@ class BaseViewController: UIViewController, BaseAlertDelegates, ProtocolAPIRespo
         }
     }
     
-
-
+    
+    
     
     func NW2()
-        {
-            let urlString = URL(string: "http://jsonplaceholder.typicode.com/users/1")
-            if let url = urlString {
-                let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-                    if error != nil {
-                        print(error!)
-                    } else {
-                        if let usableData = data {
-                            print(usableData) //JSONSerialization
-                        }
-                    }
-                }
-                task.resume()
-        }
-    }
-    
-        func NW1()
-        {
-            let config = URLSessionConfiguration.default
-            let session = URLSession(configuration: config)
-            let url = URL(string: "YOUR URL STRING")!
-            let task = session.dataTask(with: url) { (data, response, error) in
+    {
+        let urlString = URL(string: "http://jsonplaceholder.typicode.com/users/1")
+        if let url = urlString {
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    print(error!.localizedDescription)
+                    print(error!)
                 } else {
-                    print(data) // JSON Serialization
+                    if let usableData = data {
+                        print(usableData) //JSONSerialization
+                    }
                 }
             }
             task.resume()
         }
+    }
+    
+    func NW1()
+    {
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        let url = URL(string: "YOUR URL STRING")!
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                print(data) // JSON Serialization
+            }
+        }
+        task.resume()
+    }
+    
+    func didFinishDownloading(objDownloadType:BaseRequest.reqName, objReturnObject:AnyObject, objResponseCode: AnyObject, error:Error)
+    {
+        
+    }
     
     //NetworkManager Delegates
     func processResponse(objResponse:AnyObject?)
@@ -140,5 +145,5 @@ class BaseViewController: UIViewController, BaseAlertDelegates, ProtocolAPIRespo
     {
         
     }
-
+    
 }

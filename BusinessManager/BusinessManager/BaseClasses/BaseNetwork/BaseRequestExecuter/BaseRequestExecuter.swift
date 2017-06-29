@@ -22,20 +22,30 @@ class BaseRequestExecuter: NSObject, ProtocolHTTP {
         
         let objBaseHTTPCaller = BaseHTTPCaller()
        
+        //HTTP protocol
         objBaseHTTPCaller.objDelegate = self
         
+        //Request URL
         if(objRequest.reqURL != nil){
             objBaseHTTPCaller.reqStrURL = objRequest.reqURL
         }
+        
+        //Request HTTP Method Type
         if(objRequest.reqHTTPMethodType != nil){
             objBaseHTTPCaller.reqStrRequestType = objRequest.reqHTTPMethodType
         }
+        
+        //Request Parameter need to pass
         if(objRequest.reqData != nil){
             objBaseHTTPCaller.reqDataJsonParameters = objRequest.reqData
         }
+        
+        //Request Headers
         if(objRequest.reqHeaders != nil){
             objBaseHTTPCaller.reqDictHeaders = objRequest.reqHeaders
         }
+        
+        //Request Values
         if(objRequest.reqValues != nil){
             objBaseHTTPCaller.reqDictValues = objRequest.reqValues
         }
@@ -46,7 +56,7 @@ class BaseRequestExecuter: NSObject, ProtocolHTTP {
     //HTTP Delegate
     func processHTTPResponse(objResponse:AnyObject?, objError:Error?)
     {
-        
+        self.objDelegate?.processExecuterResponse(objResponse: objResponse, objError: objError)
     }
 
 }
