@@ -46,12 +46,11 @@ class LoginInteractor: BaseViewController {
         return (true, nil)
     }
     
-    func callLoginAPI(strUsername:String, strPassword:String){
-        
+    func callLoginAPI(strUsername:String, strPassword:String)
+    {
         let objLoginReq = LoginRequest()
         objLoginReq.strUname = strUsername
         objLoginReq.strPassword = strPassword
-        
         
         self.callAPIWithRequest(objRequest: objLoginReq, objDelegate: self)
         

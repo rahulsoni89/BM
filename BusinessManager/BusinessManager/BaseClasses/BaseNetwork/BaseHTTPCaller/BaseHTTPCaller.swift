@@ -10,12 +10,10 @@ import UIKit
 
 protocol ProtocolHTTP {
  
-    func responseProcess(objResponse:AnyObject?, objError:Error?)
+    func processHTTPResponse(objResponse:AnyObject?, objError:Error?)
 }
 
 class BaseHTTPCaller: NSObject {
-    
-    
     
     var reqStrURL:String?
     var reqStrRequestType:String?
@@ -57,7 +55,7 @@ class BaseHTTPCaller: NSObject {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if error != nil {
                 
-                self.objDelegate?.responseProcess(objResponse: nil, objError:error)
+               // self.objDelegate?.responseProcess(objResponse: nil, objError:error)
                 
                 print(error!)
             }

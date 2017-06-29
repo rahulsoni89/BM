@@ -14,7 +14,7 @@ protocol DownloadDelegate{
 }
 
 
-class BaseViewController: UIViewController, BaseAlertDelegates {
+class BaseViewController: UIViewController, BaseAlertDelegates, ProtocolAPIResponse {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +64,10 @@ class BaseViewController: UIViewController, BaseAlertDelegates {
     
     func callAPIWithRequest(objRequest:BaseRequest, objDelegate:AnyObject) {
         
+        let objBaseNetworkManager = BaseNetworkManager()
+        objBaseNetworkManager.initiateRequest(objRequest: objRequest, objDelegate: objDelegate)
+
+        
         //declare this property where it won't go out of scope relative to your listener
         let reachability = Reachability()!
         
@@ -76,6 +80,10 @@ class BaseViewController: UIViewController, BaseAlertDelegates {
                 } else {
                     print("Reachable via Cellular")
                 }
+                
+            let objBaseNetworkManager = BaseNetworkManager()
+            objBaseNetworkManager.initiateRequest(objRequest: objRequest, objDelegate: objDelegate)
+                
             }
         }
         reachability.whenUnreachable = { reachability in
@@ -85,7 +93,6 @@ class BaseViewController: UIViewController, BaseAlertDelegates {
                 print("Not reachable")
             }
         }
-        
     }
     
 
@@ -122,5 +129,16 @@ class BaseViewController: UIViewController, BaseAlertDelegates {
             }
             task.resume()
         }
+    
+    //NetworkManager Delegates
+    func processResponse(objResponse:AnyObject?)
+    {
+        
+    }
+    
+    func processError(objError:Error?)
+    {
+        
+    }
 
 }

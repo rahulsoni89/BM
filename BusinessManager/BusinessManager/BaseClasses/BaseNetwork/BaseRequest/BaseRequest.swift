@@ -21,8 +21,9 @@ class BaseRequest: NSObject {
     var reqContentType:String?
     var reqHTTPMethodType:String?
     var reqType:reqName?
-    var reqHeaders:[String]?
-    
+    var reqHeaders:[String:String]?
+    var reqValues:[String:String]?
+    var reqData:Data?
     
     
 }
