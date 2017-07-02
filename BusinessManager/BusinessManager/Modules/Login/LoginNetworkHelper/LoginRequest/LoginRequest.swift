@@ -19,6 +19,8 @@ class LoginRequest: BaseRequest {
         self.reqType = reqName.reqLogin
     }
     
-    
-    
+    override func getParser() -> LoginResponseParser {
+        let objLoginResponseParser = LoginResponseParser()
+        return objLoginResponseParser
+    }
 }

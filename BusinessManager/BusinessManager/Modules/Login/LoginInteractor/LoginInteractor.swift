@@ -29,7 +29,6 @@ class LoginInteractor: BaseViewController {
         {
             self.callLoginAPI(strUsername: strUsername, strPassword: strPassword)
         }
-        
     }
     
     func validateCredentials(strUsername:String, strPassword:String) -> (Bool, String?) {

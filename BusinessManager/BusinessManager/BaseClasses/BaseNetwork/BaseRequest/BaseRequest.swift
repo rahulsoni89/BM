@@ -25,5 +25,7 @@ class BaseRequest: NSObject {
     var reqValues:[String:String]?
     var reqData:Data?
     
-    
+    func getParser() -> BaseResponseParser {
+        return self.getParser()
+    }
 }

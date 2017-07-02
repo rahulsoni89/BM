@@ -10,15 +10,18 @@ import UIKit
 
 protocol ProtocolReqExecuter {
     
-    func processExecuterResponse(objResponse:AnyObject?, objError:Error?)
+    func handleResponse(objResponse:AnyObject?, objRequest:BaseRequest?)
 }
 
 
 class BaseRequestExecuter: NSObject, ProtocolHTTP {
     
     var objDelegate:ProtocolReqExecuter?
+    var objRequest:BaseRequest?
     
     func executeRequest(objRequest:BaseRequest, objDelegate:AnyObject) {
+        
+        self.objRequest = objRequest;
         
         let objBaseHTTPCaller = BaseHTTPCaller()
        
@@ -50,13 +53,26 @@ class BaseRequestExecuter: NSObject, ProtocolHTTP {
             objBaseHTTPCaller.reqDictValues = objRequest.reqValues
         }
         
-        
+        objBaseHTTPCaller.startCallingAPI()
     }
     
     //HTTP Delegate
     func processHTTPResponse(objResponse:AnyObject?, objError:Error?)
     {
-        self.objDelegate?.processExecuterResponse(objResponse: objResponse, objError: objError)
+        let objBaseEntity:BaseEntity?
+        
+        if(objError != nil)
+        {
+            let objResponseParser = self.objRequest?.getParser()
+            objBaseEntity = objResponseParser?.parseError(objResponse: objResponse)
+        }
+        else
+        {
+            let objResponseParser = self.objRequest?.getParser()
+            objBaseEntity = objResponseParser?.parsedata(objResponse: objResponse)
+        }
+        
+        self.objDelegate?.handleResponse(objResponse: objBaseEntity, objRequest: self.objRequest)
     }
 
 }

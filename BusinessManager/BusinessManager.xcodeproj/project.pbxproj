@@ -14,6 +14,10 @@
 		4F1AF0A71EED7D4B00759DCC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AF0A61EED7D4B00759DCC /* BaseViewController.swift */; };
 		4F45B4881ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F45B4861ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld */; };
 		4F45B48A1ED1D5A700EF3E2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F45B4891ED1D5A700EF3E2D /* Assets.xcassets */; };
+		4F83027F1F06B59800370A11 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83027E1F06B59800370A11 /* BaseEntity.swift */; };
+		4F8302811F06B5BD00370A11 /* LoginEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8302801F06B5BD00370A11 /* LoginEntity.swift */; };
+		4F9DCE091F0584AF007C0BC1 /* BaseResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9DCE081F0584AF007C0BC1 /* BaseResponseParser.swift */; };
+		4F9DCE0B1F05850C007C0BC1 /* LoginResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9DCE0A1F05850C007C0BC1 /* LoginResponseParser.swift */; };
 		4FB20C581EF546CE00C34C8C /* BaseAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB20C571EF546CE00C34C8C /* BaseAlertController.swift */; };
 		F70C575C1EF3BCBE00EFFC34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C57551EF3BCBE00EFFC34 /* LoginViewController.swift */; };
 		F70C575E1EF3BCD700EFFC34 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70C575D1EF3BCD700EFFC34 /* SignupViewController.swift */; };
@@ -39,6 +43,10 @@
 		4F45B4871ED1D5A700EF3E2D /* BusinessManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessManager.xcdatamodel; sourceTree = "<group>"; };
 		4F45B4891ED1D5A700EF3E2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F45B48E1ED1D5A700EF3E2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F83027E1F06B59800370A11 /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		4F8302801F06B5BD00370A11 /* LoginEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginEntity.swift; sourceTree = "<group>"; };
+		4F9DCE081F0584AF007C0BC1 /* BaseResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponseParser.swift; sourceTree = "<group>"; };
+		4F9DCE0A1F05850C007C0BC1 /* LoginResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginResponseParser.swift; path = BusinessManager/BaseClasses/BaseResponseParser/LoginResponseParser.swift; sourceTree = SOURCE_ROOT; };
 		4FB20C571EF546CE00C34C8C /* BaseAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAlertController.swift; sourceTree = "<group>"; };
 		F70C57551EF3BCBE00EFFC34 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F70C575D1EF3BCD700EFFC34 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +102,8 @@
 		4F1AF0981EED55E100759DCC /* BaseClasses */ = {
 			isa = PBXGroup;
 			children = (
+				4F83027D1F06B57E00370A11 /* BaseEntity */,
+				4F9DCE071F058496007C0BC1 /* BaseResponseParser */,
 				F76622DD1F03B7BF0022E1FA /* BaseHTTPCaller */,
 				F76622DE1F03B7BF0022E1FA /* BaseRequestExecuter */,
 				4FB20C561EF546B700C34C8C /* BaseAlertController */,
@@ -161,6 +171,22 @@
 			path = BusinessManager;
 			sourceTree = "<group>";
 		};
+		4F83027D1F06B57E00370A11 /* BaseEntity */ = {
+			isa = PBXGroup;
+			children = (
+				4F83027E1F06B59800370A11 /* BaseEntity.swift */,
+			);
+			path = BaseEntity;
+			sourceTree = "<group>";
+		};
+		4F9DCE071F058496007C0BC1 /* BaseResponseParser */ = {
+			isa = PBXGroup;
+			children = (
+				4F9DCE081F0584AF007C0BC1 /* BaseResponseParser.swift */,
+			);
+			path = BaseResponseParser;
+			sourceTree = "<group>";
+		};
 		4FB20C561EF546B700C34C8C /* BaseAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +211,7 @@
 		F70C57501EF3BCBE00EFFC34 /* LoginEntity */ = {
 			isa = PBXGroup;
 			children = (
+				4F8302801F06B5BD00370A11 /* LoginEntity.swift */,
 			);
 			path = LoginEntity;
 			sourceTree = "<group>";
@@ -305,7 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				F76622D61F027CC30022E1FA /* LoginRequest */,
-				F76622D71F027CC30022E1FA /* LoginResponse */,
+				F76622D71F027CC30022E1FA /* LoginResponseParser */,
 			);
 			path = LoginNetworkHelper;
 			sourceTree = "<group>";
@@ -318,10 +345,12 @@
 			path = LoginRequest;
 			sourceTree = "<group>";
 		};
-		F76622D71F027CC30022E1FA /* LoginResponse */ = {
+		F76622D71F027CC30022E1FA /* LoginResponseParser */ = {
 			isa = PBXGroup;
 			children = (
+				4F9DCE0A1F05850C007C0BC1 /* LoginResponseParser.swift */,
 			);
+			name = LoginResponseParser;
 			path = LoginResponse;
 			sourceTree = "<group>";
 		};
@@ -428,15 +457,19 @@
 				4FB20C581EF546CE00C34C8C /* BaseAlertController.swift in Sources */,
 				F70C57621EF3BD6300EFFC34 /* LoginPresenter.swift in Sources */,
 				4F1AF0901EED519900759DCC /* AppDelegate.swift in Sources */,
+				4F8302811F06B5BD00370A11 /* LoginEntity.swift in Sources */,
+				4F9DCE0B1F05850C007C0BC1 /* LoginResponseParser.swift in Sources */,
 				F76622D91F027D570022E1FA /* LoginRequest.swift in Sources */,
 				F70C57641EF3BD9E00EFFC34 /* LoginInteractor.swift in Sources */,
 				F70C57661EF3BDD500EFFC34 /* LoginRoutes.swift in Sources */,
 				F76622DC1F02A06A0022E1FA /* Reachability.swift in Sources */,
 				4F1AF0A41EED7CD300759DCC /* BasePresenter.swift in Sources */,
+				4F83027F1F06B59800370A11 /* BaseEntity.swift in Sources */,
 				F76622E21F03B7E80022E1FA /* BaseHTTPCaller.swift in Sources */,
 				F71B38411EF413E9001B89DA /* BaseValidator.swift in Sources */,
 				F76622D01F011C650022E1FA /* BaseNetworkManager.swift in Sources */,
 				F70C575C1EF3BCBE00EFFC34 /* LoginViewController.swift in Sources */,
+				4F9DCE091F0584AF007C0BC1 /* BaseResponseParser.swift in Sources */,
 				F76622E01F03B7D60022E1FA /* BaseRequestExecuter.swift in Sources */,
 				F76622D41F023EEF0022E1FA /* BaseRequest.swift in Sources */,
 				4F45B4881ED1D5A700EF3E2D /* BusinessManager.xcdatamodeld in Sources */,

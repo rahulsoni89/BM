@@ -24,8 +24,6 @@ class BaseHTTPCaller: NSObject {
     
     func startCallingAPI()
     {
-        //Prepare json data
-        let jsonData = reqDataJsonParameters
         
         //Create post request
         let url = URL(string: reqStrURL!)!
@@ -37,8 +35,8 @@ class BaseHTTPCaller: NSObject {
         }
         
         //Insert json data to the request
-        if (jsonData != nil) {
-            request.httpBody = jsonData
+        if (reqDataJsonParameters != nil) {
+            request.httpBody = reqDataJsonParameters
         }
         
         //Set Headers
@@ -53,36 +51,40 @@ class BaseHTTPCaller: NSObject {
 
         //Start Task
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if error != nil {
-                
-                self.objDelegate?.processHTTPResponse(objResponse: data as AnyObject?, objError: error)
-                
-                print(error!)
-            }
-            else {
-                if let usableData = data {
-                    print(usableData) //JSONSerialization
-                    
-                    self.objDelegate?.processHTTPResponse(objResponse: data as AnyObject?, objError: error)
-                    
-                    
-                    /*do {
-                        let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: AnyObject]
-                        
-                        print(json) //JSONSerialization
-                        
-                        
-                        //                            if let names = json["names"] as? [String] {
-                        //                                print(names)
-                        //                            }
-                        
-                    } catch let error as NSError {
-                        print("Failed to load: \(error.localizedDescription)")
-                    }*/
-                    
-                    
-                }
-            }
+
+            self.objDelegate?.processHTTPResponse(objResponse: data as AnyObject?, objError: error)
+
+            
+            //            if error != nil {
+//                
+//                self.objDelegate?.processHTTPResponse(objResponse: data as AnyObject?, objError: error)
+//                
+//                print(error!)
+//            }
+//            else {
+//                if let usableData = data {
+//                    print(usableData) //JSONSerialization
+//                    
+//                    self.objDelegate?.processHTTPResponse(objResponse: data as AnyObject?, objError: error)
+//                    
+//                    
+//                    /*do {
+//                        let json = try JSONSerialization.jsonObject(with: data!, options: []) as! [String: AnyObject]
+//                        
+//                        print(json) //JSONSerialization
+//                        
+//                        
+//                        //                            if let names = json["names"] as? [String] {
+//                        //                                print(names)
+//                        //                            }
+//                        
+//                    } catch let error as NSError {
+//                        print("Failed to load: \(error.localizedDescription)")
+//                    }*/
+//                    
+//                    
+//                }
+//            }
         }
         
         task.resume()

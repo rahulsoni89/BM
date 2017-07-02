@@ -67,10 +67,10 @@ class BaseNetworkManager: NSObject, ProtocolReqExecuter {
 //            }
 //        }
     }
-    
+
 
     //Delegate BaseRequestExecuter
-    func processExecuterResponse(objResponse:AnyObject?, objError:Error?)
+    func handleResponse(objResponse:AnyObject?, objRequest:BaseRequest?)
     {
         if(objError != nil)
         {
@@ -79,7 +79,6 @@ class BaseNetworkManager: NSObject, ProtocolReqExecuter {
         else
         {
             self.objDelegate?.processResponse(objResponse: objResponse)
-
         }
     }
 
