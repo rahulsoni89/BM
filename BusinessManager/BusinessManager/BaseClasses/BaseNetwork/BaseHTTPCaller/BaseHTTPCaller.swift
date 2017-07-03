@@ -24,7 +24,6 @@ class BaseHTTPCaller: NSObject {
     
     func startCallingAPI()
     {
-        
         //Create post request
         let url = URL(string: reqStrURL!)!
         var request = URLRequest(url: url)

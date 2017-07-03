@@ -8,10 +8,10 @@
 
 import UIKit
 
-protocol DownloadDelegate{
-    
-    func didFinishDownloading(objDownloadType:BaseRequest.reqName, objReturnObject:AnyObject, objResponseCode: AnyObject, error:Error)
-}
+//protocol DownloadDelegate{
+//    
+//    func didFinishDownloading(objDownloadType:BaseRequest.reqName, objReturnObject:BaseEntity)
+//}
 
 
 class BaseViewController: UIViewController, BaseAlertDelegates, ProtocolNtwrkMgrResponse {
@@ -130,20 +130,18 @@ class BaseViewController: UIViewController, BaseAlertDelegates, ProtocolNtwrkMgr
         task.resume()
     }
     
-    func didFinishDownloading(objDownloadType:BaseRequest.reqName, objReturnObject:AnyObject, objResponseCode: AnyObject, error:Error)
-    {
-        
-    }
-    
     //NetworkManager Delegates
-    func processResponse(objResponse:AnyObject?)
+    func processResponseData(objResponse:BaseEntity?, objRequest:BaseRequest?)
     {
-        
+        self.didFinishDownloading(objDownloadType: (objRequest?.reqType)!, objReturnObject: objResponse!)
     }
     
-    func processError(objError:Error?)
+    func processError(objResponse:BaseEntity?)
     {
-        
+        self.showAlertWith(strTitle: "Server Error", strMsg: (objResponse?.strError!)!, aryBtnNamesStrings: ["OK"], objDelegate: self)
     }
+    
+    func didFinishDownloading(objDownloadType:BaseRequest.reqName, objReturnObject:BaseEntity)
+    {}
     
 }

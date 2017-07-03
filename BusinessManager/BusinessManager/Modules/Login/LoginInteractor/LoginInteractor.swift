@@ -52,6 +52,11 @@ class LoginInteractor: BaseViewController {
         objLoginReq.strPassword = strPassword
         
         self.callAPIWithRequest(objRequest: objLoginReq, objDelegate: self)
+    }
+    
+    //BaseViewController Delegate
+    override func didFinishDownloading(objDownloadType:BaseRequest.reqName, objReturnObject:BaseEntity)
+    {
         
     }
     

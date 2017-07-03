@@ -10,8 +10,8 @@ import UIKit
 
 protocol ProtocolNtwrkMgrResponse {
     
-    func processResponse(objResponse:AnyObject?)
-    func processError(objError:Error?)
+    func processResponseData(objResponse:BaseEntity?, objRequest:BaseRequest?)
+    func processError(objResponse:BaseEntity?)
 }
 
 class BaseNetworkManager: NSObject, ProtocolReqExecuter {
@@ -72,13 +72,15 @@ class BaseNetworkManager: NSObject, ProtocolReqExecuter {
     //Delegate BaseRequestExecuter
     func handleResponse(objResponse:AnyObject?, objRequest:BaseRequest?)
     {
-        if(objError != nil)
+        let objBaseEntity = objResponse as! BaseEntity
+        
+        if(objBaseEntity.isError != nil)
         {
-            self.objDelegate?.processError(objError: objError)
+            self.objDelegate?.processError(objResponse: objBaseEntity)
         }
         else
         {
-            self.objDelegate?.processResponse(objResponse: objResponse)
+            self.objDelegate?.processResponseData(objResponse: objBaseEntity, objRequest: objRequest)
         }
     }
 
